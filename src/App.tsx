@@ -1,6 +1,14 @@
 import { FC, useState } from 'react'
 
-import Spinner from '@kennarddh/react-spinner'
+import {
+	Spinner,
+	Spinner2Layers,
+	Spinner2LayersFull,
+	Spinner2LayersHalfInner,
+	Spinner2LayersSameDirection,
+	SpinnerChase,
+	SpinnerChase2Colors,
+} from '@kennarddh/react-spinner'
 import '@kennarddh/react-spinner/build/style.css'
 
 const GenerateRandomHexColor = () =>
@@ -22,6 +30,71 @@ const App: FC = () => {
 				outlineWidth={10}
 				width={100}
 			/>
+			<Spinner2Layers
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				fullRotationTimeChase={1.5}
+				fullRotationTime2={2}
+				backgroundColorChase='#fff000'
+			/>
+			<Spinner2LayersFull
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				innerWidth={80}
+				innerHeight={80}
+				innerOutlineWidth={5}
+				innerBackgroundColor='#fff000'
+			/>
+			<Spinner2LayersHalfInner
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				innerWidth={80}
+				innerHeight={80}
+				innerOutlineWidth={5}
+				innerBackgroundColor='#fff000'
+			/>
+			<Spinner2LayersSameDirection
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				fullRotationTimeChase={0.8}
+				backgroundColorChase='#fff000'
+			/>
+			<SpinnerChase
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				fullRotationTimeChase={0.8}
+			/>
+			<SpinnerChase2Colors
+				backgroundColor={BackgroundColor}
+				color={Color}
+				fullRotationTime={1}
+				height={100}
+				outlineWidth={10}
+				width={100}
+				fullRotationTimeChase={0.8}
+				backgroundColorChase='#fff000'
+			/>
+
 			<button onClick={() => SetColor(GenerateRandomHexColor())}>
 				Change Color
 			</button>
